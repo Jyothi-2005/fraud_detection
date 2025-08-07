@@ -5,9 +5,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 st.set_page_config(page_title="Fraud Detection", layout="centered")
-st.title("💳 Fraud Detection on Reduced Dataset")
+st.title("💳 Fraud Detection")
 
-st.write("🔍 This app uses a logistic regression model trained on 2,953 transactions.")
+st.write("🔍 This app uses a logistic regression model.")
 
 # Load dataset
 @st.cache_data
@@ -56,3 +56,4 @@ if uploaded_file:
 
     csv = input_data.to_csv(index=False).encode()
     st.download_button("📥 Download Results", csv, "fraud_predictions.csv", "text/csv")
+
